@@ -42,7 +42,6 @@ ORG="Test-branch"
 
 # Get all repositories in the organization
 # repos=$(curl -s -H "Authorization: token $PAT_TOKEN" "https://api.github.com/orgs/$ORG/repos" | jq -r '.[].name')
-[1:28 PM] Vijay Bhargava, Madabhushi
 curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/orgs/Test-branch/repos | jq -r '.[].name'
 # Loop through each repository and set branch protection rules
 for repo in $repos; do
