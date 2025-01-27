@@ -45,7 +45,7 @@ repos=$(curl -s -H "Authorization: token $PAT_TOKEN" https://api.github.com/orgs
 
 # Loop through each repository and set branch protection rules
 for repo in $repos; do
-  curl -X PUT -H "Authorization: token $TOKEN" \
+  curl -X PUT -H "Authorization: token $PAT_TOKEN" \
     -H "Accept: application/vnd.github.v3+json" \
     https://api.github.com/repos/$ORG/$repo/branches/main/protection \
     -d '{
