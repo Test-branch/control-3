@@ -35,7 +35,7 @@
 #!/bin/bash
 
 # GitHub organization name
-ORG="YOUR_ORG"
+ORG="Test-branch"
 
 # # GitHub personal access token
 # TOKEN="YOUR_GITHUB_TOKEN"
