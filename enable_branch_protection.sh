@@ -41,7 +41,7 @@ ORG="Test-branch"
 # TOKEN="YOUR_GITHUB_TOKEN"
 
 # Get all repositories in the organization
-repos=$(curl -s -H "Authorization: token $TOKEN" https://api.github.com/orgs/$ORG/repos | jq -r '.[].name')
+repos=$(curl -s -H "Authorization: token $PAT_TOKEN" https://api.github.com/orgs/$ORG/repos | jq -r '.[].name')
 
 # Loop through each repository and set branch protection rules
 for repo in $repos; do
@@ -62,3 +62,5 @@ for repo in $repos; do
       "allow_deletions": false
     }'
 done
+
+jq: error (at <stdin>:5): Cannot index string with string "name"
