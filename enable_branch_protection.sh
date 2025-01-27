@@ -41,8 +41,8 @@ ORG="Test-branch"
 # TOKEN="YOUR_GITHUB_TOKEN"
 
 # Get all repositories in the organization
-repos=$(curl -s -H "Authorization: token $PAT_TOKEN" https://api.github.com/orgs/$ORG/repos | jq -r '.[].name')
-
+# repos=$(curl -s -H "Authorization: token $PAT_TOKEN" "https://api.github.com/orgs/$ORG/repos" | jq -r '.[].name')
+curl -H "Authorization: token $PAT_TOKEN" https://api.github.com/orgs/<organization-name-here>/repos
 # Loop through each repository and set branch protection rules
 for repo in $repos; do
   curl -X PUT -H "Authorization: token $PAT_TOKEN" \
