@@ -25,6 +25,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-            chmod +x set-branch-protection.sh
+            chmod +x enable_branch_protection.sh
             ./enable_branch_protection.sh
           
